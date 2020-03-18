@@ -1,6 +1,9 @@
 import Vue from 'vue'
 import App from './App.vue'
 
+import Navigation from './components/Navigation.vue'
+
+Vue.component('navigation', Navigation)
 Vue.config.productionTip = false
 
 new Vue({
