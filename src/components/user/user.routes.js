@@ -1,5 +1,7 @@
 import UserList from './UserList'
 import UserDetail from './UserDetails'
+import UserPosts from './UserPosts'
+
 export const userRoutes=[
   {
     path:'/',
@@ -7,6 +9,12 @@ export const userRoutes=[
   },
   {
     path:'/:userId',
-    component:UserDetail
+    component:UserDetail,
+    children:[
+      {
+        path:'/:userId',
+        component:UserPosts
+      }
+    ]
   }
 ]

@@ -7,6 +7,10 @@
         <p>Username: {{userInfo.username}}</p>
         <p>Email: {{userInfo.email}}</p>
       </div>
+      <div class="posts">
+        <h1>Posts</h1>
+        <router-view></router-view>
+      </div>
       <div class="user__address">
         <h1>Address</h1>
         <p>Street: {{userInfo.address.street}}</p>
@@ -51,5 +55,17 @@ export default {
 .container{
   line-height: 2.5em;
   text-align: center;
+}
+.user {
+display: inline-block;
+width: 49%;
+}
+.posts {
+vertical-align: top;
+display: inline-block;
+width: 49%;
+}
+ul {
+list-style-type: none;
 }
 </style>
